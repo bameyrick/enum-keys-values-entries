@@ -7,9 +7,10 @@ describe(`Enum.values`, () => {
       Yes = 'Yes',
       Sausage = 'sausage',
       Doop = 'Doop',
+      'Ice Cream' = 'Ice Cream',
     }
 
-    const expected: any = [Test.Yes, Test.Sausage, Test.Doop];
+    const expected: any = [Test.Yes, Test.Sausage, Test.Doop, Test['Ice Cream']];
 
     const result = Enum.values(Test);
 
@@ -21,9 +22,10 @@ describe(`Enum.values`, () => {
       Yes = 'yes',
       Sausage = 'Sausage',
       Doop = 'doop 3',
+      'Ice Cream' = 'Ice cream',
     }
 
-    const expected: any = [Test.Yes, Test.Sausage, Test.Doop];
+    const expected: any = [Test.Yes, Test.Sausage, Test.Doop, Test['Ice Cream']];
 
     const result = Enum.values(Test);
 
@@ -35,9 +37,10 @@ describe(`Enum.values`, () => {
       Yes = 1,
       Sausage = 2,
       Doop = 3,
+      'Ice Cream' = 4,
     }
 
-    const expected: any = [Test.Yes, Test.Sausage, Test.Doop];
+    const expected: any = [Test.Yes, Test.Sausage, Test.Doop, Test['Ice Cream']];
 
     const result = Enum.values(Test);
 
@@ -49,9 +52,10 @@ describe(`Enum.values`, () => {
       Yes,
       Sausage,
       Doop,
+      'Ice Cream',
     }
 
-    const expected: any = [Test.Yes, Test.Sausage, Test.Doop];
+    const expected: any = [Test.Yes, Test.Sausage, Test.Doop, Test['Ice Cream']];
 
     const result = Enum.values(Test);
 
@@ -63,11 +67,12 @@ describe(`Enum.keys`, () => {
   it(`Should only get the right hand side for an enum where the values match the keys`, () => {
     enum Test {
       Yes = 'Yes',
-      Sausage = 'sausage',
+      Sausage = 'Sausage',
       Doop = 'Doop',
+      'Ice Cream' = 'Ice Cream',
     }
 
-    const expected: string[] = ['Yes', 'Sausage', 'Doop'];
+    const expected: string[] = ['Yes', 'Sausage', 'Doop', 'Ice Cream'];
 
     const result = Enum.keys(Test);
 
@@ -77,11 +82,12 @@ describe(`Enum.keys`, () => {
   it(`Should only get the right hand side for an enum where the values match do not the keys`, () => {
     enum Test {
       Yes = 'yes',
-      Sausage = 'Sausage',
+      Sausage = 'Sausages',
       Doop = 'doop 3',
+      'Ice Cream' = 'Ice cream',
     }
 
-    const expected: string[] = ['Yes', 'Sausage', 'Doop'];
+    const expected: string[] = ['Yes', 'Sausage', 'Doop', 'Ice Cream'];
 
     const result = Enum.keys(Test);
 
@@ -93,9 +99,10 @@ describe(`Enum.keys`, () => {
       Yes = 1,
       Sausage = 2,
       Doop = 3,
+      'Ice Cream' = 4,
     }
 
-    const expected: string[] = ['Yes', 'Sausage', 'Doop'];
+    const expected: string[] = ['Yes', 'Sausage', 'Doop', 'Ice Cream'];
 
     const result = Enum.keys(Test);
 
@@ -107,9 +114,10 @@ describe(`Enum.keys`, () => {
       Yes,
       Sausage,
       Doop,
+      'Ice Cream',
     }
 
-    const expected: string[] = ['Yes', 'Sausage', 'Doop'];
+    const expected: string[] = ['Yes', 'Sausage', 'Doop', 'Ice Cream'];
 
     const result = Enum.keys(Test);
 
@@ -121,14 +129,16 @@ describe(`Enum.entries`, () => {
   it(`Should only get the right hand side for an enum where the values match the keys`, () => {
     enum Test {
       Yes = 'Yes',
-      Sausage = 'sausage',
+      Sausage = 'Sausage',
       Doop = 'Doop',
+      'Ice Cream' = 'Ice Cream',
     }
 
     const expected: any = [
       ['Yes', Test.Yes],
       ['Sausage', Test.Sausage],
       ['Doop', Test.Doop],
+      ['Ice Cream', Test['Ice Cream']],
     ];
 
     const result = Enum.entries(Test);
@@ -139,14 +149,16 @@ describe(`Enum.entries`, () => {
   it(`Should only get the right hand side for an enum where the values match do not the keys`, () => {
     enum Test {
       Yes = 'yes',
-      Sausage = 'Sausage',
+      Sausage = 'Sausages',
       Doop = 'doop 3',
+      'Ice Cream' = 'Ice cream',
     }
 
     const expected: any = [
       ['Yes', Test.Yes],
       ['Sausage', Test.Sausage],
       ['Doop', Test.Doop],
+      ['Ice Cream', Test['Ice Cream']],
     ];
 
     const result = Enum.entries(Test);
@@ -159,12 +171,14 @@ describe(`Enum.entries`, () => {
       Yes = 1,
       Sausage = 2,
       Doop = 3,
+      'Ice Cream' = 4,
     }
 
     const expected: any = [
       ['Yes', Test.Yes],
       ['Sausage', Test.Sausage],
       ['Doop', Test.Doop],
+      ['Ice Cream', Test['Ice Cream']],
     ];
 
     const result = Enum.entries(Test);
@@ -177,12 +191,14 @@ describe(`Enum.entries`, () => {
       Yes,
       Sausage,
       Doop,
+      'Ice Cream',
     }
 
     const expected: any = [
       ['Yes', Test.Yes],
       ['Sausage', Test.Sausage],
       ['Doop', Test.Doop],
+      ['Ice Cream', Test['Ice Cream']],
     ];
 
     const result = Enum.entries(Test);
