@@ -5,7 +5,7 @@
     "target": "ES2015",
     "sourceMap": false,
     "experimentalDecorators": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noImplicitThis": true,
     "strictNullChecks": true,
     "declaration": true,
