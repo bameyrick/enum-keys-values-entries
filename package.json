@@ -9,7 +9,7 @@
   "scripts": {
     "build": "npm run lint && tsc -p tsconfig.json --outDir dist/",
     "test": "KARMA_SINGLE_RUN=false karma start ./karma.conf.js",
-    "test-single": "npm run tidy-clean && npm run lint && npm run karma start ./karma.conf.js",
+    "test-single": "npm run tidy-clean && npm run lint && karma start ./karma.conf.js",
     "lint": "eslint . --ext .ts",
     "tidy-clean": "rm -rf dist coverage",
     "prepare-husky": "husky install",
@@ -18,7 +18,8 @@
   "lint-staged": {
     "*.ts": [
       "prettier --print-width 140 --single-quote --arrow-parens avoid --trailing-comma es5 --parser typescript --write",
-      "eslint . --ext .ts"
+      "eslint . --ext .ts",
+      "npm run test-single"
     ],
     "*.js": ["prettier --print-width 140 --single-quote --arrow-parens avoid --trailing-comma es5 --parser babel --write"],
     "*.json": ["prettier --print-width 140 --single-quote --trailing-comma es5 --parser json --write"]
