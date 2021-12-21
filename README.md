@@ -3,7 +3,7 @@
 Get just the keys (left hand side), values (right hand side), or entries (tuple of [key, value]) of a TypeScript enum.
 
 [![GitHub release](https://img.shields.io/github/release/bameyrick/enum-keys-values-entries.svg)](https://github.com/bameyrick/enum-keys-values-entries/releases)
-[![Build Status](https://travis-ci.com/bameyrick/enum-keys-values-entries.svg?branch=master)](https://travis-ci.com/bameyrick/enum-keys-values-entries)
+[![Build Status](https://app.travis-ci.com/bameyrick/enum-keys-values-entries.svg?branch=main)](https://travis-ci.com/github/bameyrick/enum-keys-values-entries)
 [![codecov](https://codecov.io/gh/bameyrick/enum-keys-values-entries/branch/master/graph/badge.svg)](https://codecov.io/gh/bameyrick/enum-keys-values-entries)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/9002fceb0cad4a08849b4b6eed3fa285)](https://www.codacy.com/manual/bameyrick/enum-keys-values-entries)
 
