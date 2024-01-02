@@ -72,11 +72,11 @@ describe(`Enum.keys`, () => {
       'Ice Cream' = 'Ice Cream',
     }
 
-    const expected: string[] = ['Yes', 'Sausage', 'Doop', 'Ice Cream'];
+    const expected = ['Yes', 'Sausage', 'Doop', 'Ice Cream'];
 
     const result = Enum.keys(Test);
 
-    expect(result).toEqual(expected);
+    expect(result).toEqual(expected as any);
   });
 
   it(`Should only get the right hand side for an enum where the values match do not the keys`, () => {
@@ -87,11 +87,11 @@ describe(`Enum.keys`, () => {
       'Ice Cream' = 'Ice cream',
     }
 
-    const expected: string[] = ['Yes', 'Sausage', 'Doop', 'Ice Cream'];
+    const expected = ['Yes', 'Sausage', 'Doop', 'Ice Cream'];
 
     const result = Enum.keys(Test);
 
-    expect(result).toEqual(expected);
+    expect(result).toEqual(expected as any);
   });
 
   it(`Should only get the right hand side for an enum where the values are numbers`, () => {
@@ -102,11 +102,11 @@ describe(`Enum.keys`, () => {
       'Ice Cream' = 4,
     }
 
-    const expected: string[] = ['Yes', 'Sausage', 'Doop', 'Ice Cream'];
+    const expected = ['Yes', 'Sausage', 'Doop', 'Ice Cream'];
 
     const result = Enum.keys(Test);
 
-    expect(result).toEqual(expected);
+    expect(result).toEqual(expected as any);
   });
 
   it(`Should only get the right hand side for an enum where the values are implied`, () => {
@@ -117,11 +117,11 @@ describe(`Enum.keys`, () => {
       'Ice Cream',
     }
 
-    const expected: string[] = ['Yes', 'Sausage', 'Doop', 'Ice Cream'];
+    const expected = ['Yes', 'Sausage', 'Doop', 'Ice Cream'];
 
     const result = Enum.keys(Test);
 
-    expect(result).toEqual(expected);
+    expect(result).toEqual(expected as any);
   });
 });
 
